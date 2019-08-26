@@ -1,0 +1,21 @@
+<p>departmant-list works!</p>
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">departmant</th>
+            <th scope="col">component</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dep of departmant">
+            <td>{{ dep.d_id }}</td>
+            <td>{{ dep.departmant }}</td>
+            <td>{{ dep.component }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,22 @@
+<p>departmant-form works!</p>
+<div class="card my-5">
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()" #departmanForm="ngForm">
+            <div class="form-group">
+              <label for="departmant">departmant</label>
+              <input type="text" [(ngModel)]="departmant.departmant" 
+                class="form-control" d_id="departmant" departmant="departmant" placeholder="Enter your departmant"
+                required #departmant="ngModel">
+            </div>
+            <div [hidden]="!departmant.pristine" class="alert alert-danger">departmant is required</div>
+            <div class="form-group">
+              <label for="component">component</label>
+              <input type="text" [(ngModel)]="departmant.component" 
+                class="form-control" d_id="component" component="component" placeholder="Enter your component"
+                required #component="ngModel">
+              <div [hidden]="!component.pristine" class="alert alert-danger">component is required</div>
+            </div>
+            <button type="submit" [disabled]="!departmantForm.form.valid" class="btn btn-info">Submit</button>
+          </form>
+        </div>
+      </div>
