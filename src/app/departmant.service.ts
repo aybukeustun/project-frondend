@@ -8,10 +8,12 @@ import { Observable } from 'rxjs/Observable';
 export class DepartmantService {
  
   private departmantUrl: string;
+  private departmantUrl2: string;
   
  
   constructor(private http: HttpClient) {
     this.departmantUrl = 'http://localhost:8080/departmant/getall';
+    this.departmantUrl2='http://localhost:8080/departmant/save';
   }
  
   public findAll(): Observable<Departmant[]> {
@@ -19,6 +21,7 @@ export class DepartmantService {
   }
  
   public save(departmant: Departmant) {
-    return this.http.post<Departmant>(this.departmantUrl, departmant);
+    console.log(departmant);
+    return this.http.post<Departmant>(this.departmantUrl2, departmant);
   }
 }
