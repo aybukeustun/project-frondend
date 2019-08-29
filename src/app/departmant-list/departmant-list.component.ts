@@ -14,8 +14,7 @@ export class DepartmantListComponent implements OnInit {
   constructor(private departmanService:DepartmantService) { }
 
   ngOnInit() {
-    this.departmanService.findAll().subscribe(data => {
-      this.departmant = data;
+    this.departmanService.findAll().subscribe(data => {this.departmant = data;
       console.log(this.departmant);
     });
   }

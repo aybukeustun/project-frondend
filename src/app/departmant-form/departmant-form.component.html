@@ -2,7 +2,7 @@
   <div class="card-body">
     <form (ngSubmit)="onSubmit()" #departmantForm="ngForm">
       <div class="form-group">
-        <label for="departmant">Name {{departmant.value}}</label>
+        <label for="departmant">Name</label>
         <input type="text" [(ngModel)]="departmant_id" 
           class="form-control" id="name" name="name" placeholder="Enter your name"
           required #departmant="ngModel">

@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { DepartmantFormComponent } from './departmant-form/departmant-form.component';
 import { DepartmantListComponent } from './departmant-list/departmant-list.component';
 import { DepartmantService } from './departmant.service';
+import { UserService } from './user.service';
+import { UserFormComponent } from "./user-form/user-form.component";
 
 
 
@@ -16,6 +18,7 @@ import { DepartmantService } from './departmant.service';
     AppComponent,
     DepartmantFormComponent,
     DepartmantListComponent,
+    UserFormComponent,
     
   ],
   imports: [
@@ -25,7 +28,7 @@ import { DepartmantService } from './departmant.service';
     FormsModule
   ],
 
-  providers: [DepartmantService],
+  providers: [DepartmantService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
