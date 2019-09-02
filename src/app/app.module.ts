@@ -10,6 +10,7 @@ import { DepartmantListComponent } from './departmant-list/departmant-list.compo
 import { DepartmantService } from './departmant.service';
 import { UserService } from './user.service';
 import { UserFormComponent } from "./user-form/user-form.component";
+import { AuthGaurdService } from './service/auth-gaurd.service';
 
 
 
@@ -18,8 +19,7 @@ import { UserFormComponent } from "./user-form/user-form.component";
     AppComponent,
     DepartmantFormComponent,
     DepartmantListComponent,
-    UserFormComponent,
-    
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +27,7 @@ import { UserFormComponent } from "./user-form/user-form.component";
     HttpClientModule,
     FormsModule
   ],
-
-  providers: [DepartmantService, UserService],
+  providers: [DepartmantService, UserService,AuthGaurdService, UserFormComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
